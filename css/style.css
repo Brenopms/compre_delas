@@ -3,6 +3,10 @@ body, html {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .bg { 
     /* The image used */
     background-image: url("https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -65,7 +69,25 @@ body, html {
         margin: 0;
         line-height: normal;
     }
-}
+
+    input {
+        color: white;
+    }
+
+    input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1; /* Firefox */
+    }
+    
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: white;
+    }
+
+    input::-ms-input-placeholder { /* Microsoft Edge */
+        color: white;
+    }
+
+    }
 
 .em-breve{
     font-family: 'Ubuntu', sans-serif;
@@ -86,11 +108,12 @@ body, html {
 }
 
 input {
+  text-decoration: none;
   line-height: 1em;
   outline: none;
   text-align: center;
   border: none;
-  border-bottom: 1px solid #FF1E4E;
+  border-bottom: 1px solid #3A312E;
   width: 100%;
   font-size: 15px;
   font-family: 'Ubuntu', sans-serif;
@@ -99,21 +122,41 @@ input {
   color: black;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill {
+    -webkit-text-fill-color: black;
+    text-decoration: none;
+    line-height: 1em;
+    outline: none;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #3A312E;
+    width: 100%;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.75px;
+    background-color: transparent;
+    color: black;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(15, 15, 15, 0.863);
+    color: rgb(31, 31, 31);
     opacity: 1; /* Firefox */
 }
 
 input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:rgba(15, 15, 15, 0.863);
+    color: rgb(31, 31, 31);
 }
 
 input::-ms-input-placeholder { /* Microsoft Edge */
-    color: rgba(15, 15, 15, 0.863);
+    color: rgb(31, 31, 31);
 }
 button {
   text-align: center;
-  background-color: #FF1E4E;
+  background-color: #DAA981;
   outline: none;
   border: none;
   text-transform: uppercase;
@@ -126,8 +169,30 @@ button {
 
 button:hover {
       background-color: transparent;
-      border: 1px solid #FF1E4E;
+      border: 1px solid #3A312E;
       cursor: pointer;
-      color: #FF1E4E;
+      color: #3A312E;
       transition: all .3s;
+}
+
+.footer {
+	display: flex;
+	background: #3A312E;
+	height: 80px;
+	align-items: center;
+
+}
+
+.footer p {
+    font-family: 'Ubuntu', sans-serif;
+	flex: 1; 
+	text-align: center;
+	font-size: 1.15em;
+	color: #919090;
+}
+
+.footer .footer-icons {
+    color: whitesmoke;
+    padding: 5px;
+    
 }
